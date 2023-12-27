@@ -1,0 +1,380 @@
+<header class="l-header" id="header">
+  <nav class="nav bd-container">
+    <%= link_to 'Michael', '#', class: "nav__logo" %>
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <%= link_to "#home", class: "nav__link active-link" do %>
+          <i class="bx bx-home nav__icon"></i>Home <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#profile", class: "nav__link" do %>
+          <i class="bx bx-user nav__icon"></i>Profile <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#education", class: "nav__link" do %>
+          <i class="bx bx-book nav__icon"></i>Education <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#skills", class: "nav__link" do %>
+          <i class="bx bx-receipt nav__icon"></i>Skills <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#experience", class: "nav__link" do %>
+          <i class="bx bx-briefcase-alt nav__icon"></i>Experience <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#certificates", class: "nav__link" do %>
+          <i class="bx bx-award nav__icon"></i>Certificates <% end %>
+        </li>
+
+        <li class="nav__item">
+          <%= link_to "#references", class: "nav__link" do %>
+          <i class="bx bx-link-external nav__icon"></i>References <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="bx bx-grid-alt"></i>
+    </div>
+  </nav>
+</header>
+
+<main class="l-main bd-container">
+  <!-- All elements within this div, is generated in PDF -->
+  <div class="resume" id="area-cv">
+    <div class="resume__left">
+      <!--========== HOME ==========-->
+      <section class="home" id="home">
+        <div class="home__container section bd-grid">
+          <div class="home__data bd-grid">
+            <%= image_tag 'IMG_9274.jpg', alt: "A profile image of Michael", class: "home__img" %>
+
+            <h1 class="home__title">Michael <b>Nhye</b></h1>
+            <h3 class="home__profession">Software developer</h3>
+
+            <div>
+              <!-- Button to download your CV saved in the pdf folder. Available for mobile -->
+              <%= link_to "Download", asset_path('ResumeCv.pdf'), class: "home__button-movil", download: "" %>
+              <!-- a download="" href="assets/pdf/ResumeCv.pdf" class="home__button-movil">Dowload Cv</a -->
+              <i
+                class="bx bx-download generate-pdf"
+                title="Generate PDF"
+                id="resume-button"
+              ></i>
+            </div>
+          </div>
+
+          <div class="home__address bd-grid">
+            <span class="home__information">
+              <i class="bx bx-map home__icon"></i> 3015 7th St W Apt 207, <br>West Fargo, ND 58078
+            </span>
+            <span class="home__information">
+              <i class="bx bx-envelope home__icon"></i> Michael.Nhye@outlook.com
+            </span>
+            <span class="home__information">
+              <i class="bx bx-phone home__icon"></i> +49 (157) 3460-3066
+            </span>
+          </div>
+        </div>
+
+        <!-- Theme change button -->
+        <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
+
+        <!-- Button to generate and download the pdf. Available for desktop. -->
+        <i
+          class="bx bx-download generate-pdf"
+          title="Generate PDF"
+          id="resume-button"
+        ></i>
+      </section>
+
+      <!--========== SOCIAL ==========-->
+      <section class="social section">
+        <h2 class="section-title">SOCIAL</h2>
+
+        <div class="social__container bd-grid">
+          <%= link_to "https://github.com/ohmygodtokyo", class: "social__link", target: "_blank" do %>
+            <i class='bx bxl-github social__icon'></i> @ohmygodtokyo
+          <% end %>
+        </div>
+      </section>
+
+      <!--========== PROFILE ==========-->
+      <section class="profile section" id="profile">
+        <h2 class="section-title">Profile</h2>
+        <p class="profile__description">
+          Hello my name is Michael, I'm a multifaceted software developer with a passion for an active lifestyle, music production, and indulging in delicious cuisine. I'm looking forward to meeting my fellow colleagues and learn from the experienced staff!
+        </p>
+      </section>
+
+      <!--========== EDUCATION ==========-->
+      <section class="education section" id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education__container bd-grid">
+          <div class="education__content">
+            <div class="education__time">
+              <span class="education__rounder"></span>
+              <span class="education__line"></span>
+            </div>
+
+            <div class="education__data bd-grid">
+              <h3 class="education__title">HIGH SCHOOL</h3>
+              <span class="education__studies">West Fargo Sheyenne High School</span>
+              <span class="education__year">2013 - 2017</span>
+            </div>
+          </div>
+
+          <div class="education__content">
+            <div class="education__time">
+              <span class="education__rounder"></span>
+              <span class="education__line"></span>
+            </div>
+
+            <div class="education__data bd-grid">
+              <h3 class="education__title">PRE-MEDICINE</h3>
+              <span class="education__studies">University of Minnesota Moorhead</span>
+              <span class="education__year">2017 - 2021</span>
+            </div>
+          </div>
+
+          <div class="education__content">
+            <div class="education__time">
+              <span class="education__rounder"></span>
+              <!-- <span class="education__line"></span> -->
+            </div>
+
+            <div class="education__data bd-grid">
+              <h3 class="education__title">WEB DEVELOPMENT</h3>
+              <span class="education__studies">Le Wagon</span>
+              <span class="education__year">2022 - 2023</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--========== SKILLS  ==========-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__content bd-grid">
+          <ul class="skills__data">
+            <li class="skills__name">
+              <span class="skills__circle"></span> TERMINAL
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> VSCODE
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> RUBY
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> SQL
+            </li>
+          </ul>
+
+          <ul class="skills__data">
+            <li class="skills__name">
+              <span class="skills__circle"></span> HTML
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> CSS
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> JAVASCRIPT
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> WEBPACK
+            </li>
+          </ul>
+
+          <ul class="skills__data">
+            <li class="skills__name">
+              <span class="skills__circle"></span> FIGMA
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> GIT
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> GITHUB
+            </li>
+          </ul>
+
+          <ul class="skills__data">
+            <li class="skills__name">
+              <span class="skills__circle"></span> HEROKU
+            </li>
+            <li class="skills__name">
+              <span class="skills__circle"></span> RUBY ON RAILS
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="resume__right">
+      <!--========== EXPERIENCE ==========-->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience__container bd-grid">
+          <div class="experience__content">
+            <div class="experience__time">
+              <span class="experience__rounder"></span>
+              <span class="experience__line"></span>
+            </div>
+
+            <div class="experience__data bd-grid">
+              <h3 class="experience__title">SALES ASSOCIATE</h3>
+              <span class="experience__company"
+                >From 2016 to 2017 | JCPenney</span
+              >
+              <p class="experience__description">
+                At JCPenney, I helped customers find the perfect products, navigate the store, and even offered style advice. I thrived on connecting with people and making their shopping experience enjoyable. Through this, I built key communication and teamwork skills, learned about fashion and retail, and discovered the power of a friendly smile. Now, I'm a reliable and enthusiastic team player ready for new challenges, where I can keep putting that customer-first approach to work!
+              </p>
+            </div>
+          </div>
+
+          <div class="experience__content">
+            <div class="experience__time">
+              <span class="experience__rounder"></span>
+              <span class="experience__line"></span>
+            </div>
+
+            <div class="experience__data bd-grid">
+              <h3 class="experience__title">DRAGON CALLER </h3>
+              <span class="experience__company"
+                >From 2017 to 2019 | MSUM Alumni Foundation</span
+              >
+              <p class="experience__description">
+                At the MSUM Alumni Foundation, I wasn't just a student worker; I was a connector, building bridges between generations. I engaged in insightful conversations with alumni, learning their stories and sharing campus updates, all while helping secure resources for scholarships and programs that benefited my fellow students. Through these conversations, I honed my communication skills, learned to adapt to different people, and discovered the power of building meaningful connections. It was an experience that helped me grow both personally and professionally, leaving me with valuable skills and a deeper understanding of the university's legacy.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience__content">
+            <div class="experience__time">
+              <span class="experience__rounder"></span>
+              <!-- <span class="experience__line"></span> -->
+            </div>
+
+            <div class="experience__data bd-grid">
+              <h3 class="experience__title">LOGISTICS SPECIALIST</h3>
+              <span class="experience__company">From 2020 to 2022 | Doordash</span>
+              <p class="experience__description">
+                As a logistics specialist, I tackled multiple tasks across different platforms, navigating unfamiliar territories and unexpected hurdles with calmness and adaptability. I honed my time management skills, ensuring efficient deliveries even during peak hours. Keeping customers informed and happy was a priority, as evidenced by my positive reviews and high satisfaction ratings. Whether you need someone who excels at organization and time management, or someone who thrives in customer service and problem-solving, my diverse delivery experience has equipped me with valuable skills ready to be applied in your environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--========== PROJECTS ==========-->
+      <section class="certificate section" id="certificates">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="certificate__container bd-grid">
+          <div class="certificate__content">
+            <h3 class="certificate__title">
+              SecondLife
+            </h3>
+            <p class="certificate__description">
+              A web application that connects people who have items they no longer need with others who could use them for a while. It's a win-win: declutter your home, make some extra cash, and help the environment by preventing usable items from ending up in landfills.
+            </p>
+          </div>
+
+          <div class="certificate__content">
+            <h3 class="certificate__title">
+              African Lingua
+            </h3>
+            <p class="certificate__description">
+              African Lingua is a web application designed to empower readers and celebrate African literature. It's your one-stop shop for storing, managing, and enjoying your favorite reads in a personalized digital library. African Lingua is a web application that lets you carry your personal library anywhere with you. Upload your favorite classics, contemporary novels, or even personal documents in PDF format. Create collections to keep things organized, and add sticky notes to mark important passages or capture your thoughts. Break down language barriers by translating books into your native tongue using Google Translate's extensive library of African languages. Access your library from any smartphone or tablet, pick up where you left off, and even download books for offline reading on commutes or trips.
+            </p>
+          </div>
+
+          <!-- <div class="certificate__content">
+            <h3 class="certificate__title">
+              Achievement medal for productivity excellence during the year
+              (2019)
+            </h3>
+            <p class="certificate__description">
+              For meeting the expectations of leading the team to work the
+              specified tasks in the labor field.
+            </p>
+          </div> -->
+        </div>
+      </section>
+
+      <!--========== REFERENCES ==========-->
+      <section class="references section" id="references">
+        <h2 class="section-title">References</h2>
+
+        <div class="references__container bd-grid">
+          <div class="references__content bd-grid">
+            <span class="references__subtitle">Human Resource Officer</span>
+            <h3 class="references__title">Lessie Saytonneh</h3>
+            <ul class="references__contact">
+              <li>Phone: +1 (701) 306-4109</li>
+              <li>Email: lsaytonneh@yahoo.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--========== LANGUAGES ==========-->
+      <section class="languages section">
+        <h2 class="section-title">Languages</h2>
+
+        <div class="languages__container">
+          <ul class="languages__content bd-grid">
+            <li class="languages__name">
+              <span class="languages__circle"></span>English
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--========== INTERESTS ==========-->
+      <section class="interests section">
+        <h2 class="section-title">Interests</h2>
+
+        <div class="interests__container bd-grid">
+          <div class="interests__content">
+            <i class="bx bx-headphone interests__icon"></i>
+            <span class="interests__name">Music</span>
+          </div>
+          <div class="interests__content">
+            <i class="bx bxs-plane-alt interests__icon"></i>
+            <span class="interests__name">Travel</span>
+          </div>
+          <div class="interests__content">
+            <i class="bx bxs-book interests__icon"></i>
+            <span class="interests__name">Read</span>
+          </div>
+          <div class="interests__content">
+            <i class="bx bx-dumbbell interests__icon"></i>
+            <span class="interests__name">Fitness</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!--========== SCROLL TOP ==========-->
+<%= link_to "#", class: "scrolltop", id: "scroll-top" do %>
+  <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+<% end %>
+
+<!--========== HTML2PDF ==========-->
+<!-- script src="assets/js/html2pdf.bundle.min.js"></script -->
+
+<!--========== MAIN JS ==========-->
+<!-- script src="assets/js/main.js"></script -->

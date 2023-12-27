@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Michael's Resume</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <!-- BOX ICONS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  </head>
+
+  <body>
+    <%# class="scale-cv" %>
+    <%= yield %>
+
+    <!-- HTML2PDF -->
+    <%= javascript_include_tag "html2pdf.bundle.min.js" %>
+    
+    <!-- MAIN JS -->
+    <%= javascript_include_tag "main" %>
+  </body>
+</html>
